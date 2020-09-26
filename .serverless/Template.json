@@ -1,5 +1,5 @@
 {
   "components": {
-    "testApp": "/Users/localadmin/.serverless/components/registry/npm/@sls-next/serverless-component@1.15.1/node_modules/@sls-next/serverless-component"
+    "newApp": "/Users/localadmin/.serverless/components/registry/npm/@sls-next/serverless-component@1.17.0/node_modules/@sls-next/serverless-component"
   }
 }
