@@ -1,2 +1,14 @@
-newApp:
+appCloudfrontdnssub:
   component: "@sls-next/serverless-component@1.17.0"
+  inputs:
+    domain: ["app", "juancjara.com"]
+    cloudfront:
+      defaults:
+        forward:
+          headers:
+            [
+              CloudFront-Is-Desktop-Viewer,
+              CloudFront-Is-Mobile-Viewer,
+              CloudFront-Is-Tablet-Viewer,
+              Host
+            ]

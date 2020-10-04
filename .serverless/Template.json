@@ -1,5 +1,5 @@
 {
   "components": {
-    "newApp": "/Users/localadmin/.serverless/components/registry/npm/@sls-next/serverless-component@1.17.0/node_modules/@sls-next/serverless-component"
+    "appCloudfrontdnssub": "/Users/localadmin/.serverless/components/registry/npm/@sls-next/serverless-component@1.17.0/node_modules/@sls-next/serverless-component"
   }
 }
