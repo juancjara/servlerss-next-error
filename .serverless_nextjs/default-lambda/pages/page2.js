@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "Cj4O");
+/******/ 	return __webpack_require__(__webpack_require__.s = "EkJR");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2860,7 +2860,62 @@ module.exports = Axios;
 
 /***/ }),
 
-/***/ "Cj4O":
+/***/ "DTay":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("nWF0")
+
+
+/***/ }),
+
+/***/ "DZz7":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+exports.__esModule=true;exports.getFontDefinitionFromNetwork=getFontDefinitionFromNetwork;exports.getFontDefinitionFromManifest=getFontDefinitionFromManifest;const https=__webpack_require__("7WL4");const CHROME_UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36';const IE_UA='Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko';function getFontForUA(url,UA){return new Promise(resolve=>{let rawData='';https.get(url,{headers:{'user-agent':UA}},res=>{res.on('data',chunk=>{rawData+=chunk;});res.on('end',()=>{resolve(rawData.toString('utf8'));});});});}async function getFontDefinitionFromNetwork(url){let result='';/**
+   * The order of IE -> Chrome is important, other wise chrome starts loading woff1.
+   * CSS cascading 🤷‍♂️.
+   */result+=await getFontForUA(url,IE_UA);result+=await getFontForUA(url,CHROME_UA);return result;}function getFontDefinitionFromManifest(url,manifest){var _manifest$find;return((_manifest$find=manifest.find(font=>{if(font&&font.url===url){return true;}return false;}))===null||_manifest$find===void 0?void 0:_manifest$find.content)||'';}
+//# sourceMappingURL=font-utils.js.map
+
+/***/ }),
+
+/***/ "DfZB":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+
+/***/ }),
+
+/***/ "EkJR":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2888,7 +2943,7 @@ __webpack_require__.r(__webpack_exports__);
 
     
     const { processEnv } = __webpack_require__("4VNc")
-    processEnv([{"path":".env.local","contents":"GGWPP=\"dev\"\n"},{"path":".env.production","contents":""},{"path":".env","contents":"GGWP=\"staging env file\"\nsubdomain=\"demo1\"\ndomain=\"juancjara.com\"\n"}])
+    processEnv([{"path":".env.local","contents":"GGWPP=\"dev\"\n"},{"path":".env.production","contents":""},{"path":".env","contents":"GGWP=\"staging env file without next.config.js\"\nsubdomain=\"demo1\"\ndomain=\"juancjara.com\"\n"}])
   
     
     const runtimeConfig = {}
@@ -2974,10 +3029,10 @@ __webpack_require__.r(__webpack_exports__);
         getStaticPaths,
         reactLoadableManifest,
         canonicalBase: "",
-        buildId: "wF9MpWW2wLdcfrisJRw65",
+        buildId: "FVqY3v3GYjURgHtGEd48K",
         assetPrefix: "",
         runtimeConfig: runtimeConfig.publicRuntimeConfig || {},
-        previewProps: {previewModeId:"1a22ea34e1fd7d35a833ddf185d0c50e",previewModeSigningKey:"0b22d57bd9bd0f94464a2fc819dbd96134e2f019668d30fa3c2fb5f186c42a12",previewModeEncryptionKey:"69e1aaf878da9f6d4a5322549a130579323a24328820b5599f5805a29f75dd0a"},
+        previewProps: {previewModeId:"b632903c420883c1d5e10d09a545fa3a",previewModeSigningKey:"3c483979856777e978e4d4db1e0664690fecc65637198f7197bbcd666f2e6c55",previewModeEncryptionKey:"1a0dd608587dadaea8e8d37b2745ffec3c4034cca5363d06bfa2f8aea6f059c0"},
         env: process.env,
         basePath: "",
         ..._renderOpts
@@ -3000,7 +3055,7 @@ __webpack_require__.r(__webpack_exports__);
           _nextData = true;
           parsedUrl.pathname = getRouteFromAssetPath(
             parsedUrl.pathname.replace(
-              new RegExp('/_next/data/wF9MpWW2wLdcfrisJRw65/'),
+              new RegExp('/_next/data/FVqY3v3GYjURgHtGEd48K/'),
               '/'
             ),
             '.json'
@@ -3125,61 +3180,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   
-
-/***/ }),
-
-/***/ "DTay":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("nWF0")
-
-
-/***/ }),
-
-/***/ "DZz7":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-exports.__esModule=true;exports.getFontDefinitionFromNetwork=getFontDefinitionFromNetwork;exports.getFontDefinitionFromManifest=getFontDefinitionFromManifest;const https=__webpack_require__("7WL4");const CHROME_UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36';const IE_UA='Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko';function getFontForUA(url,UA){return new Promise(resolve=>{let rawData='';https.get(url,{headers:{'user-agent':UA}},res=>{res.on('data',chunk=>{rawData+=chunk;});res.on('end',()=>{resolve(rawData.toString('utf8'));});});});}async function getFontDefinitionFromNetwork(url){let result='';/**
-   * The order of IE -> Chrome is important, other wise chrome starts loading woff1.
-   * CSS cascading 🤷‍♂️.
-   */result+=await getFontForUA(url,IE_UA);result+=await getFontForUA(url,CHROME_UA);return result;}function getFontDefinitionFromManifest(url,manifest){var _manifest$find;return((_manifest$find=manifest.find(font=>{if(font&&font.url===url){return true;}return false;}))===null||_manifest$find===void 0?void 0:_manifest$find.content)||'';}
-//# sourceMappingURL=font-utils.js.map
-
-/***/ }),
-
-/***/ "DfZB":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Syntactic sugar for invoking a function and expanding an array for arguments.
- *
- * Common use case would be to use `Function.prototype.apply`.
- *
- *  ```js
- *  function f(x, y, z) {}
- *  var args = [1, 2, 3];
- *  f.apply(null, args);
- *  ```
- *
- * With `spread` this example can be re-written.
- *
- *  ```js
- *  spread(function(x, y, z) {})([1, 2, 3]);
- *  ```
- *
- * @param {Function} callback
- * @returns {Function}
- */
-module.exports = function spread(callback) {
-  return function wrap(arr) {
-    return callback.apply(null, arr);
-  };
-};
-
 
 /***/ }),
 
@@ -3813,7 +3813,7 @@ module.exports = function createError(message, config, code, request, response) 
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-fa276ba060a4a8ac7eef.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/wF9MpWW2wLdcfrisJRw65/_buildManifest.js\",\"static/wF9MpWW2wLdcfrisJRw65/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/index-c160103f9fd21cecdfac.js\"],\"/_app\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/css/b7a208e09803b2077891.css\",\"static/chunks/pages/_app-29bbc917560313cc6df5.js\"],\"/_error\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/pages/_error-f4f567df00ce0843964e.js\"],\"/auth\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/chunks/pages/auth-1f86f343b6aa8e1687c3.js\"],\"/page2\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/page2-8a1ef9f086063077a183.js\"],\"/page3\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/page3-05e73f9275976c9e19f9.js\"]},\"ampFirstPages\":[]}");
+module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-fa276ba060a4a8ac7eef.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/FVqY3v3GYjURgHtGEd48K/_buildManifest.js\",\"static/FVqY3v3GYjURgHtGEd48K/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/index-c160103f9fd21cecdfac.js\"],\"/_app\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/css/b7a208e09803b2077891.css\",\"static/chunks/pages/_app-29bbc917560313cc6df5.js\"],\"/_error\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/pages/_error-f4f567df00ce0843964e.js\"],\"/auth\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/chunks/pages/auth-1f86f343b6aa8e1687c3.js\"],\"/page2\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/page2-8a1ef9f086063077a183.js\"],\"/page3\":[\"static/chunks/main-afa405cba62fb94dc369.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.cb05d56be993eb6b088a.js\",\"static/chunks/daf300957170fab806dc6619adb4406583493e96.b1b4058541fcfd6d9ff9.js\",\"static/chunks/7303d8fb7fc7fbdd1ca0f6dfa47c3f1bb9fe1430.c2eaec7e6e449d86047d.js\",\"static/css/5e57edd47b12e91a5ae0.css\",\"static/chunks/pages/page3-05e73f9275976c9e19f9.js\"]},\"ampFirstPages\":[]}");
 
 /***/ }),
 

@@ -36,3 +36,7 @@ yarn-error.log*
 #serverless
 .serverless
 .serverless_nextjs
+.serverless/
+.serverless_nextjs/
+/.serverless/
+/.serverless_nextjs/
