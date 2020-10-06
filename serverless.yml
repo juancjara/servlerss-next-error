@@ -1,7 +1,9 @@
-appCloudfrontdnssub:
+appCloudfrontdEnv:
   component: "@sls-next/serverless-component@1.17.0"
   inputs:
-    domain: ["app", "juancjara.com"]
+    domain:
+      - ${env.subdomain}
+      - ${env.domain}
     cloudfront:
       defaults:
         forward:

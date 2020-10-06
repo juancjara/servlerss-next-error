@@ -6,7 +6,7 @@ var router = Router();
 
 router
   .get("/api/hello", (req, res) => {
-    res.json({ bar: "ff" });
+    res.json({ bar: "ff", env: process.env.GGWP });
   })
   .get("/api/foo", (req, res) => {
     console.log(req.params);
